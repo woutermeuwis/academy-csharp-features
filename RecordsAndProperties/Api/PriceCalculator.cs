@@ -3,8 +3,9 @@ using Shared.Enums;
 
 namespace Api
 {
-    public class PriceCalculator
-    {   private static readonly int _marginPercentage = 40;
+    public static class PriceCalculator
+    {
+        private const int MarginPercentage = 40;
 
         public static int CalculateForEvent(EventEntity eventEntity)
         {
@@ -98,8 +99,9 @@ namespace Api
                     price += sportsGame.NumberOfPlayers * sportsGame.CostsPerPlayer / 200;
             }
 
-            price = price + price / 100 * _marginPercentage;
+            price = price + price / 100 * MarginPercentage;
             return price;
         }
+
     }
 }

@@ -2,6 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <Configurations>Debug;Release;Records;FullClass;Pattern</Configurations>
+        <Platforms>AnyCPU</Platforms>
     </PropertyGroup>
     
     <ItemGroup Label="nuget">
@@ -12,5 +14,11 @@
     
     <ItemGroup Label="ProjectRefs">
         <ProjectReference Include="..\Shared\Shared.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Compile Update="Mappers\NewEventMapper.Completed.cs">
+        <DependentUpon>NewEventMapper.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 </Project>

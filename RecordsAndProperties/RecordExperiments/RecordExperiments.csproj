@@ -1,14 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <OutputType>exe</OutputType>
+        <TargetFramework>net5</TargetFramework>
         <LangVersion>9</LangVersion>
         <Configurations>Debug;Release;Records;FullClass;Pattern</Configurations>
         <Platforms>AnyCPU</Platforms>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(Configuration)' == 'Records'">
-        <DefineConstants>RECORD</DefineConstants>
-    </PropertyGroup>
-    
+    <ItemGroup Label="ProjectRefs">
+      <ProjectReference Include="..\Shared\Shared.csproj" />
+    </ItemGroup>
+
 </Project>
